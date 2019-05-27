@@ -1,6 +1,6 @@
 ## Sorting 
 
-[Sorting](embedded_heapsort.c) is a key component of many embedded applications, and is one of the fundamental aspects of programming. 
+[Sorting](embedded_sorting.c) is a key component of many embedded applications, and is one of the fundamental aspects of programming. 
 
 Embedded systems, however, present some specific challenges and constraints that limit the use of traditional recursive sorting (e.g. quicksort). Specifically code size and memory usage are high priority in these kind of applications.
 
