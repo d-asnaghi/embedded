@@ -24,17 +24,17 @@ The [code](embedded_sorting.c) provided in this section will explore three main 
 #### Insertion Sort
 Visualization                            | Time complexity | Space complexity
 :---------------------------------------:|:---------------:|:----------------:
-![insertion sort](../docs/insertion_sort.gif)|    O(n^2)       |     O(1) 
+![insertion sort](../.docs/insertion_sort.gif)|    O(n^2)       |     O(1) 
 
 #### Shell Sort
 Visualization                            | Time complexity | Space complexity
 :---------------------------------------:|:---------------:|:----------------:
-![insertion sort](../docs/shell_sort.gif)    | O(n(log(n))^2)  |     O(1) 
+![insertion sort](../.docs/shell_sort.gif)    | O(n(log(n))^2)  |     O(1) 
 
 #### Heap Sort
 Visualization                            | Time complexity | Space complexity
 :---------------------------------------:|:---------------:|:----------------:
-![insertion sort](../docs/heap_sort.gif)     |    O(nlog(n))   |     O(1) 
+![insertion sort](../.docs/heap_sort.gif)     |    O(nlog(n))   |     O(1) 
 
 
 
