@@ -28,7 +28,7 @@
 #include <stdint.h>
 
 /*******************************************************************************
- Integer insertion sort optimmized for embdedded systems
+ INSERTION SORT
  *******************************************************************************/
 
 void embedded_insertionsort(int32_t * arr, uint32_t len){
@@ -46,7 +46,7 @@ void embedded_insertionsort(int32_t * arr, uint32_t len){
 }
 
 /*******************************************************************************
- Integer shell sort optimmized for embdedded systems
+ SHELL SORT
  *******************************************************************************/
 
 void embedded_shellsort(int32_t * arr, uint32_t len){
@@ -58,14 +58,14 @@ void embedded_shellsort(int32_t * arr, uint32_t len){
 			uint32_t j;
 			int32_t temp = arr[i];
 			for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) 
-                arr[j] = arr[j - gap]; 
+				arr[j] = arr[j - gap]; 
 			arr[j] = temp;
 		}
 	}
 }
 
 /*******************************************************************************
- Integer heap sort optimmized for embdedded systems
+ HEAP SORT
  *******************************************************************************/
 
 #define l_child(node) 2*node+1
@@ -109,7 +109,7 @@ void embedded_heapsort(int32_t * arr, uint32_t len){
 }
 
 /*******************************************************************************
- Driver code
+ DRIVER CODE
  *******************************************************************************/
 
 #include <stdio.h>
@@ -117,6 +117,7 @@ void embedded_heapsort(int32_t * arr, uint32_t len){
 #include <math.h>
 #include <time.h>
 
+#define N_TRIAL 100
 
 void fill_random(int32_t arr[], uint32_t len){
 	for (uint32_t i = 0; i < len; i++)
@@ -129,8 +130,6 @@ uint8_t check(int32_t arr[], uint32_t len){
 			return 0;
 	return 1;
 }
-
-#define N_TRIAL 100
 
 float timed_sorting(void sort_fn(int32_t*, uint32_t), int32_t arr[], uint32_t len){
     
@@ -164,18 +163,17 @@ int main(int argc, char const *argv[])
 	const uint32_t len = atoi(argv[1]);	
 	int32_t array[len];
 
-	// time taken by heap sort
+	// timing for heap sort
 	time_taken = timed_sorting(embedded_heapsort, array, len);
     printf("[HEAP SORT: %.3f ms, N = %d]\n", time_taken, len); 
 
-    // time taken by shell sort
+    // timing for shell sort
     time_taken = timed_sorting(embedded_shellsort, array, len);
     printf("[SHELL SORT: %.3f ms, N = %d]\n", time_taken, len);
 
-	// time taken by insertion sort
+	// timing for insertion sort
     time_taken = timed_sorting(embedded_insertionsort, array, len);
     printf("[INSERTION SORT: %.3f ms, N = %d]\n", time_taken, len);
-
 
 	return 0;
 }
