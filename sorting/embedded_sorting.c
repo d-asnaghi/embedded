@@ -132,20 +132,20 @@ uint8_t check(int32_t arr[], uint32_t len){
 }
 
 float timed_sorting(void sort_fn(int32_t*, uint32_t), int32_t arr[], uint32_t len){
-    
-    clock_t t; 
-    double ms_taken=0;
-    uint8_t n;
+	
+	clock_t t; 
+	double ms_taken=0;
+	uint8_t n;
 
-    for (n=0; n<N_TRIAL; n++){
-	    fill_random(arr, len);
-	    t = clock(); 
-	    sort_fn(arr, len);
-	    t = clock() - t; 
-	    ms_taken += ((double)t)/CLOCKS_PER_SEC; // in seconds 
+	for (n=0; n<N_TRIAL; n++){
+		fill_random(arr, len);
+		t = clock(); 
+		sort_fn(arr, len);
+		t = clock() - t; 
+		ms_taken += ((double)t)/CLOCKS_PER_SEC; // in seconds 
 	}
-    
-    check(arr, len) ? printf("[ARRAY SORTED] ") : printf("[SORTING FAILED] ");
+	
+	check(arr, len) ? printf("[ARRAY SORTED] ") : printf("[SORTING FAILED] ");
 	return (ms_taken/N_TRIAL)*1000;
 }
 
@@ -165,15 +165,15 @@ int main(int argc, char const *argv[])
 
 	// timing for heap sort
 	time_taken = timed_sorting(embedded_heapsort, array, len);
-    printf("[HEAP SORT: %.3f ms, N = %d]\n", time_taken, len); 
+	printf("[HEAP SORT: %.3f ms, N = %d]\n", time_taken, len); 
 
-    // timing for shell sort
-    time_taken = timed_sorting(embedded_shellsort, array, len);
-    printf("[SHELL SORT: %.3f ms, N = %d]\n", time_taken, len);
+	// timing for shell sort
+	time_taken = timed_sorting(embedded_shellsort, array, len);
+	printf("[SHELL SORT: %.3f ms, N = %d]\n", time_taken, len);
 
 	// timing for insertion sort
-    time_taken = timed_sorting(embedded_insertionsort, array, len);
-    printf("[INSERTION SORT: %.3f ms, N = %d]\n", time_taken, len);
+	time_taken = timed_sorting(embedded_insertionsort, array, len);
+	printf("[INSERTION SORT: %.3f ms, N = %d]\n", time_taken, len);
 
 	return 0;
 }
