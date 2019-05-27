@@ -143,10 +143,9 @@ float timed_sorting(void sort_fn(int32_t*, uint32_t), int32_t arr[], uint32_t le
 	    sort_fn(arr, len);
 	    t = clock() - t; 
 	    ms_taken += ((double)t)/CLOCKS_PER_SEC; // in seconds 
-	 }
+	}
     
     check(arr, len) ? printf("[ARRAY SORTED] ") : printf("[SORTING FAILED] ");
-
 	return (ms_taken/N_TRIAL)*1000;
 }
 
@@ -154,12 +153,13 @@ int main(int argc, char const *argv[])
 {
 	double time_taken;
 
-	// create array of user selectable length
+	// parse user input
 	if (argc < 2 || atoi(argv[1]) <= 0){
 		printf("[INVALID ARGUMENT]\n");
 		return 0;
 	}
 		
+	// create an array to sort
 	const uint32_t len = atoi(argv[1]);	
 	int32_t array[len];
 
