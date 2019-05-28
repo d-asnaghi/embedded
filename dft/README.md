@@ -29,7 +29,7 @@ All of the above implementations, however, have a time complexity of O(N^2), sin
 
 The driver code provides a dummy imput sampled at 1 kHz, where 3 main frequencies have been added with different amplitudes at 100, 200 and 300 Hz.
 
-![Power Spectrum](../.docs/power.pdf)
+![Power Spectrum](../.docs/power.png)
 
 The output of the DFT power spectrum was then printed to `stdout` and plotted using a the unix utility GNUplot, clearly showing the three main frequency componts as expect 
 
