@@ -77,4 +77,4 @@ Heap sort, however, takes the lead in terms of execution time and should be used
 
 1. [Nigel Jones, Sorting (in) embedded systems](https://embeddedgurus.com/stack-overflow/2009/03/sorting-in-embedded-systems/)
 2. [R. Marcelino et Al., Sorting Units for FPGA-Based Embedded Systems](https://link.springer.com/content/pdf/10.1007/978-0-387-09661-2_2.pdf )
-3. [Carlo Zapponi, Sorting visualiztion, 2014](http://sorting.at)
+3. [Carlo Zapponi, Sorting visualization, 2014](http://sorting.at)
