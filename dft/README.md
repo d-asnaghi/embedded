@@ -1,9 +1,9 @@
 ## Discrete Fourier Transform (DFT) 
 
 The [Discrete Fourier Transform (DFT)](dft.c) is a fundamental tool in many Digital Signal Processing (DSP) application and often finds very fitting applications in embedded systems. Mathematically, the DFT can be represented using the following equation [1]:
-<center>
+
 ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/7fd128c54d01b4f1c65a0ee972a77b07dfc99605)
-</center>
+
 Its primary function consists in converting a finite series of equally spaced samples in the time domain into a same-length, equally-spaced series of samples in the frequency domain. It can also be interpreted as:
 
  * A complete description of the Discrete-Time Fourier transform (DTFT) of an N-periodic sequence, which comprises only discrete frequency components.
@@ -28,9 +28,9 @@ All of the above implementations, however, have a time complexity of O(N^2), sin
 ## Visualization
 
 The driver code provides a dummy imput sampled at 1 kHz, where 3 main frequencies have been added with different amplitudes at 100, 200 and 300 Hz.
-<center>
+
 ![Power Spectrum](../.docs/power.pdf)
-</center>
+
 The output of the DFT power spectrum was then printed to `stdout` and plotted using a the unix utility GNUplot, clearly showing the three main frequency componts as expect 
 
 
