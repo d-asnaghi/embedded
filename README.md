@@ -9,7 +9,8 @@ The following is a personal collection of algorithms implementation in C specifi
 
 ## Sections
 
-* [Sorting](sorting) 
+* [Discrete Fourier Transform (DFT)](dft) 
+* [Sorting](sorting)
 
 ## Directory tree
 
@@ -17,10 +18,13 @@ The project is organized in this directory tree, every topic contains an explana
  
 ```bash
 ├── README.md
-├── docs
-│   └── [supporting files]
+├── dft
+│   ├── README.md
+│   ├── dft.c
+│   ├── lookup.c
+│   └── lookup.h
 ├── sorting
 │   ├── README.md
-│   └──  embedded_sorting.c
+│   └── embedded_sorting.c
 └── template.c
 ```
