@@ -31,7 +31,7 @@ The driver code provides a dummy imput sampled at 1 kHz, where 3 main frequencie
 
 ![Power Spectrum](../.docs/power.png)
 
-The output of the DFT power spectrum was then printed to `stdout` and plotted using a the unix utility GNUplot, clearly showing the three main frequency componts as expect 
+The output of the DFT power spectrum was then printed to `stdout` and plotted using a the unix utility GNUplot, clearly showing the three main frequency components as expect 
 
 
 ## Timing
